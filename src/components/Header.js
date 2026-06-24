@@ -8,6 +8,7 @@ const NAV = [
   { label: 'Use Cases',   href: '/usecases',    icon: '☰' },
   { label: 'States',      href: '/states',      icon: '⊡' },
   { label: 'API Tracker', href: '/apis',         icon: '⇄' },
+  { label: 'Live API',    href: '/live',         icon: '⚡', badge: 'Dev' },
 ]
 
 export default function Header() {
@@ -47,6 +48,12 @@ export default function Header() {
                   }`}
               >
                 {n.label}
+                {n.badge && (
+                  <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wide"
+                    style={{ background: 'rgba(252, 211, 77, 0.25)', color: '#fcd34d', border: '1px solid rgba(252,211,77,0.4)' }}>
+                    {n.badge}
+                  </span>
+                )}
               </Link>
             )
           })}
