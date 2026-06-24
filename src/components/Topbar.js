@@ -3,34 +3,31 @@
 export default function Topbar() {
   const now = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })
   return (
-    <div style={{ background: '#0e3d28' }} className="text-white text-xs px-6 py-2 flex items-center justify-between">
-      <div className="flex items-center gap-3">
-        {/* MoA&FW Logo */}
-        <div className="w-8 h-8 rounded-full overflow-hidden bg-white/10 flex items-center justify-center shrink-0">
+    <div className="bg-white px-6 md:px-8 py-3.5 flex items-center justify-between shadow-sm relative z-10">
+      <div className="flex items-center gap-4 md:gap-6">
+        {/* MoA&FW Logo - larger and crisp */}
+        <div className="flex items-center justify-center shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/moafw-logo.png"
             alt="MoA&FW Logo"
-            width={32}
-            height={32}
-            style={{ objectFit: 'contain', width: 32, height: 32 }}
+            className="h-12 md:h-16 w-auto"
+            style={{ objectFit: 'contain' }}
           />
         </div>
-        <span className="opacity-90">Ministry of Agriculture &amp; Farmers Welfare, Government of India</span>
-        <span className="opacity-40 mx-1">|</span>
-        {/* AgriStack Logo */}
-        <div className="h-6 flex items-center overflow-hidden shrink-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/agristack-logo.png"
-            alt="AgriStack"
-            height={24}
-            style={{ objectFit: 'contain', height: 24, maxWidth: 120 }}
-          />
+        <div className="flex flex-col border-l-2 border-gray-100 pl-4 md:pl-6">
+          <span className="text-sm md:text-base font-extrabold text-gray-900 uppercase tracking-wide mb-1">
+            Ministry of Agriculture & Farmers Welfare
+          </span>
+          <span className="text-[10px] md:text-xs font-bold text-gray-500 tracking-wider uppercase">
+            Government of India
+          </span>
         </div>
-        <span className="opacity-90">AgriStack Programme — Digital Agriculture Mission</span>
       </div>
-      <div className="opacity-70">{now}</div>
+      
+      <div className="hidden md:flex items-center gap-6">
+        <div className="text-xs font-semibold text-gray-400 uppercase tracking-wide">{now}</div>
+      </div>
     </div>
   )
 }
