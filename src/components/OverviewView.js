@@ -3,6 +3,7 @@ import Topbar from '@/components/Topbar'
 import Header from '@/components/Header'
 import StatusBadge from '@/components/StatusBadge'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, PieChart, Pie } from 'recharts'
+import { useRouter } from 'next/navigation'
 
 function StatCard({ label, value, sub, accent }) {
   return (
@@ -15,6 +16,8 @@ function StatCard({ label, value, sub, accent }) {
 }
 
 export default function OverviewView({ useCasesData, stateApiData, enrolledFarmers, farmersUpdated }) {
+  const router = useRouter()
+
   // Derived stats
   const total      = useCasesData.length
   const live       = useCasesData.filter(u => u.status === 'Live').length
@@ -128,7 +131,16 @@ export default function OverviewView({ useCasesData, stateApiData, enrolledFarme
                 <Tooltip
                   contentStyle={{ border: '0.5px solid #e8f0e0', borderRadius: 8, fontSize: 12 }}
                   cursor={{ fill: '#f7f8f5' }} />
-                <Bar dataKey="value" radius={[4, 4, 0, 0]}>
+                <Bar 
+                  dataKey="value" 
+                  radius={[4, 4, 0, 0]} 
+                  onClick={(data) => {
+                    if (data && data.name) {
+                      router.push(`/usecases?status=${encodeURIComponent(data.name)}`)
+                    }
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
                   {statusChartData.map((d, i) => <Cell key={i} fill={d.color} />)}
                 </Bar>
               </BarChart>
@@ -140,8 +152,21 @@ export default function OverviewView({ useCasesData, stateApiData, enrolledFarme
             <div className="text-sm font-medium mb-2" style={{ color: '#0e3d28' }}>By Category</div>
             <ResponsiveContainer width="100%" height={160}>
               <PieChart>
-                <Pie data={categoryData} cx="50%" cy="50%" innerRadius={45} outerRadius={70}
-                  dataKey="value" paddingAngle={3}>
+                <Pie 
+                  data={categoryData} 
+                  cx="50%" 
+                  cy="50%" 
+                  innerRadius={45} 
+                  outerRadius={70}
+                  dataKey="value" 
+                  paddingAngle={3}
+                  onClick={(data) => {
+                    if (data && data.name) {
+                      router.push(`/usecases?category=${encodeURIComponent(data.name)}`)
+                    }
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
                   {categoryData.map((d, i) => <Cell key={i} fill={d.color} />)}
                 </Pie>
                 <Tooltip contentStyle={{ border: '0.5px solid #e8f0e0', borderRadius: 8, fontSize: 12 }} />

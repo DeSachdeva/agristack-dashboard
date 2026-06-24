@@ -3,13 +3,13 @@
 // ============================================================
 // ✅  APPROVED AND LIVE.
 // ============================================================
-// Imported:   24/6/2026, 3:45:29 pm
+// Imported:   24/6/2026, 2:40:59 pm
 // Source:     scripts/AgriStack_Data_Template.xlsx
 // Verified by: (not specified)
 // ============================================================
 
 export const DATA_LAST_UPDATED      = "24 June 2026"
-export const ENROLLED_FARMER_IDS    = "9.99 CR+"
+export const ENROLLED_FARMER_IDS    = "99971794"
 export const FARMER_DATA_UPDATED    = "24 June 2026"
 export const IS_STAGING             = false
 
@@ -813,7 +813,7 @@ export const STATE_API_DATA = [
   {
     "state": "Uttar Pradesh",
     "region": "North",
-    "mou": false,
+    "mou": true,
     "dcs": true,
     "fr": true,
     "apisTotal": 24,

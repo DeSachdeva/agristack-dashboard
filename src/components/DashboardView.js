@@ -165,6 +165,15 @@ export default function DashboardView({ useCasesData }) {
   const [status,         setStatus]         = useState('All')
   const [category,       setCategory]       = useState('All')
   const [selectedStates, setSelectedStates] = useState([])
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const urlStatus = params.get('status')
+    const urlCategory = params.get('category')
+    
+    if (urlStatus && STATUSES.includes(urlStatus)) setStatus(urlStatus)
+    if (urlCategory && CATEGORIES.includes(urlCategory)) setCategory(urlCategory)
+  }, [])
   const [stateDropOpen,  setStateDropOpen]  = useState(false)
   const [page,           setPage]           = useState(1)
   const dropRef = useRef(null)
