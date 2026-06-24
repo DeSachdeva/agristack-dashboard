@@ -3,14 +3,14 @@
 // ============================================================
 // ✅  APPROVED AND LIVE.
 // ============================================================
-// Imported:   24/6/2026, 2:40:59 pm
+// Imported:   24/6/2026, 2:22:05 pm
 // Source:     scripts/AgriStack_Data_Template.xlsx
 // Verified by: (not specified)
 // ============================================================
 
 export const DATA_LAST_UPDATED      = "24 June 2026"
 export const ENROLLED_FARMER_IDS    = "99971794"
-export const FARMER_DATA_UPDATED    = "24 June 2026"
+export const FARMER_DATA_UPDATED    = "23 June 2026"
 export const IS_STAGING             = false
 
 export const USE_CASES = [
@@ -81,14 +81,7 @@ export const USE_CASES = [
     "category": "Central",
     "dept": "DoA",
     "mapper": "i6:o2",
-    "states": [
-      "UP",
-      "CG",
-      "PJ",
-      "GJ",
-      "AS",
-      "KL"
-    ]
+    "states": []
   },
   {
     "id": 5,
@@ -97,9 +90,7 @@ export const USE_CASES = [
     "category": "Central",
     "dept": "DoA",
     "mapper": "",
-    "states": [
-      "MH"
-    ]
+    "states": []
   },
   {
     "id": 6,
@@ -108,11 +99,7 @@ export const USE_CASES = [
     "category": "Central",
     "dept": "DoA",
     "mapper": "i5:o6",
-    "states": [
-      "MP",
-      "CG",
-      "OD"
-    ]
+    "states": []
   },
   {
     "id": 7,
@@ -168,18 +155,7 @@ export const USE_CASES = [
     "category": "Central",
     "dept": "DoA",
     "mapper": "i2:o14",
-    "states": [
-      "UP",
-      "CG",
-      "AP",
-      "TG",
-      "RJ",
-      "TN",
-      "OD",
-      "GJ",
-      "AS",
-      "MN"
-    ],
+    "states": [],
     "scheme": "SHC"
   },
   {

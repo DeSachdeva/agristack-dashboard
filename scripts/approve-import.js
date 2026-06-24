@@ -31,12 +31,15 @@ content = content.replace(
 )
 
 fs.writeFileSync(LIVE_DATA, content, 'utf8')
-fs.unlinkSync(STAGING)
+
+// Reset staging placeholder instead of deleting to prevent Next.js crashes
+const placeholder = `// No pending import.\nexport const IS_STAGING = false\nexport const DATA_LAST_UPDATED = null\nexport const ENROLLED_FARMER_IDS = null\nexport const FARMER_DATA_UPDATED = null\nexport const USE_CASES = []\nexport const STATE_API_DATA = []\nexport const MAPPER_APIS = []\nexport const MAPPER_DONE_COUNTS = {}\nexport const STATUS_COLORS = {}\n`
+fs.writeFileSync(STAGING, placeholder, 'utf8')
 
 console.log('')
 console.log('✅  IMPORT APPROVED — Data is now LIVE.')
 console.log('')
-console.log('   The staging file has been removed.')
+console.log('   The staging file has been reset.')
 console.log('   The dashboard is now showing your new data.')
 console.log('')
 console.log('   If you need to undo this, run:')

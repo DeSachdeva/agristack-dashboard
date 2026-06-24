@@ -3,14 +3,14 @@
 // ============================================================
 // ✅  APPROVED AND LIVE.
 // ============================================================
-// Imported:   24/6/2026, 2:40:59 pm
+// Imported:   24/6/2026, 2:08:55 pm
 // Source:     scripts/AgriStack_Data_Template.xlsx
 // Verified by: (not specified)
 // ============================================================
 
 export const DATA_LAST_UPDATED      = "24 June 2026"
 export const ENROLLED_FARMER_IDS    = "99971794"
-export const FARMER_DATA_UPDATED    = "24 June 2026"
+export const FARMER_DATA_UPDATED    = "23 June 2026"
 export const IS_STAGING             = false
 
 export const USE_CASES = [
@@ -23,15 +23,13 @@ export const USE_CASES = [
     "mapper": "i1:o2",
     "states": [
       "UP",
-      "MP",
       "CG",
+      "MP",
       "MH",
       "AP",
       "TG",
       "RJ",
-      "TN",
-      "GJ",
-      "AS"
+      "TN"
     ],
     "scheme": "PM-KISAN"
   },
@@ -42,13 +40,7 @@ export const USE_CASES = [
     "category": "Central",
     "dept": "DoA",
     "mapper": "i1004:o1007",
-    "states": [
-      "UP",
-      "CG",
-      "MH",
-      "GJ",
-      "AS"
-    ]
+    "states": []
   },
   {
     "id": 3,
@@ -57,21 +49,7 @@ export const USE_CASES = [
     "category": "Central",
     "dept": "Horticulture",
     "mapper": "i1002:o1004",
-    "states": [
-      "UP",
-      "MP",
-      "CG",
-      "MH",
-      "AP",
-      "TG",
-      "RJ",
-      "TN",
-      "GJ",
-      "AS",
-      "OD",
-      "KL",
-      "KA"
-    ],
+    "states": [],
     "scheme": "MIDH"
   },
   {
@@ -81,14 +59,7 @@ export const USE_CASES = [
     "category": "Central",
     "dept": "DoA",
     "mapper": "i6:o2",
-    "states": [
-      "UP",
-      "CG",
-      "PJ",
-      "GJ",
-      "AS",
-      "KL"
-    ]
+    "states": []
   },
   {
     "id": 5,
@@ -97,9 +68,7 @@ export const USE_CASES = [
     "category": "Central",
     "dept": "DoA",
     "mapper": "",
-    "states": [
-      "MH"
-    ]
+    "states": []
   },
   {
     "id": 6,
@@ -108,11 +77,7 @@ export const USE_CASES = [
     "category": "Central",
     "dept": "DoA",
     "mapper": "i5:o6",
-    "states": [
-      "MP",
-      "CG",
-      "OD"
-    ]
+    "states": []
   },
   {
     "id": 7,
@@ -168,18 +133,7 @@ export const USE_CASES = [
     "category": "Central",
     "dept": "DoA",
     "mapper": "i2:o14",
-    "states": [
-      "UP",
-      "CG",
-      "AP",
-      "TG",
-      "RJ",
-      "TN",
-      "OD",
-      "GJ",
-      "AS",
-      "MN"
-    ],
+    "states": [],
     "scheme": "SHC"
   },
   {
@@ -804,7 +758,7 @@ export const STATE_API_DATA = [
     "state": "Gujarat",
     "region": "West",
     "mou": true,
-    "dcs": false,
+    "dcs": true,
     "fr": true,
     "apisTotal": 24,
     "apisDone": 20,

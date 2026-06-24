@@ -74,7 +74,8 @@ rl.question('Your choice: ', answer => {
 
   // Also delete staging if it exists
   const staging = path.join(__dirname, '..', 'src', 'data', 'usecases.STAGING.js')
-  if (fs.existsSync(staging)) fs.unlinkSync(staging)
+  const placeholder = `// No pending import.\nexport const IS_STAGING = false\nexport const DATA_LAST_UPDATED = null\nexport const ENROLLED_FARMER_IDS = null\nexport const FARMER_DATA_UPDATED = null\nexport const USE_CASES = []\nexport const STATE_API_DATA = []\nexport const MAPPER_APIS = []\nexport const MAPPER_DONE_COUNTS = {}\nexport const STATUS_COLORS = {}\n`
+  fs.writeFileSync(staging, placeholder, 'utf8')
 
   const ts = selected.replace('usecases_', '').replace('.js', '')
   const dt = ts.slice(0, 10) + ' at ' + ts.slice(11).replace(/-/g, ':')
