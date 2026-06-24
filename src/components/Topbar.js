@@ -1,33 +1,31 @@
 'use client'
-import Image from 'next/image'
 
 export default function Topbar() {
   const now = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })
   return (
     <div style={{ background: '#0e3d28' }} className="text-white text-xs px-6 py-2 flex items-center justify-between">
       <div className="flex items-center gap-3">
-        {/* Ministry logo — replace src with your actual image path e.g. /images/moafw-logo.png */}
-        <div className="w-7 h-7 rounded-full overflow-hidden bg-white/10 flex items-center justify-center shrink-0">
-          <Image
+        {/* MoA&FW Logo */}
+        <div className="w-8 h-8 rounded-full overflow-hidden bg-white/10 flex items-center justify-center shrink-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/images/moafw-logo.png"
             alt="MoA&FW Logo"
-            width={28}
-            height={28}
-            className="object-contain"
-            onError={(e) => { e.currentTarget.style.display = 'none' }}
+            width={32}
+            height={32}
+            style={{ objectFit: 'contain', width: 32, height: 32 }}
           />
         </div>
         <span className="opacity-90">Ministry of Agriculture &amp; Farmers Welfare, Government of India</span>
         <span className="opacity-40 mx-1">|</span>
-        {/* AgriStack logo — replace src with your actual image path e.g. /images/agristack-logo.png */}
-        <div className="h-5 flex items-center overflow-hidden shrink-0">
-          <Image
+        {/* AgriStack Logo */}
+        <div className="h-6 flex items-center overflow-hidden shrink-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/images/agristack-logo.png"
             alt="AgriStack"
-            width={90}
-            height={20}
-            className="object-contain"
-            onError={(e) => { e.currentTarget.style.display = 'none' }}
+            height={24}
+            style={{ objectFit: 'contain', height: 24, maxWidth: 120 }}
           />
         </div>
         <span className="opacity-90">AgriStack Programme — Digital Agriculture Mission</span>
