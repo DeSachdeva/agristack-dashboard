@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "generate-template": "node scripts/generate-template.js",
-    "import-excel": "node scripts/excel-to-data.js"
+    "import-excel": "node scripts/excel-to-data.js",
+    "approve-import": "node scripts/approve-import.js",
+    "reject-import": "node scripts/reject-import.js",
+    "revert": "node scripts/revert.js",
+    "export-excel": "node scripts/export-to-excel.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",

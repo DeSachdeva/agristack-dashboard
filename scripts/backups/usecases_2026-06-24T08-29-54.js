@@ -3,13 +3,13 @@
 // ============================================================
 // ✅  APPROVED AND LIVE.
 // ============================================================
-// Imported:   24/6/2026, 2:08:55 pm
+// Imported:   24/6/2026, 1:22:39 pm
 // Source:     scripts/AgriStack_Data_Template.xlsx
 // Verified by: (not specified)
 // ============================================================
 
 export const DATA_LAST_UPDATED      = "24 June 2026"
-export const ENROLLED_FARMER_IDS    = "99971794"
+export const ENROLLED_FARMER_IDS    = "99875423"
 export const FARMER_DATA_UPDATED    = "23 June 2026"
 export const IS_STAGING             = false
 
